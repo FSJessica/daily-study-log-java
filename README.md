@@ -82,6 +82,8 @@ This is a personal repository, focused on:
 - Improve problem-solving skills, clean code and backend skills.
 
 ### Logs
-All study sessions are documented here: ➡️ [View code](./code)
+All study sessions are documented here: ➡️ [View code](./logs)
 
 Practice, examples and exercises: ➡️ [View code](./code)
+
+Notes and concepts: ➡️ [View code](./notes)
