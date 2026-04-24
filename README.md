@@ -28,12 +28,17 @@ Este é um repositório pessoal, onde meu foco é:
 
 Todas as sessões de estudos estão documentadas aqui:
 
-➡️ [View code](./code)
+➡️ [View code](./logs)
 ## Exercícios
 
 Prática, exemplos e exercícios:
 
 ➡️ [View code](./code)
+## Anotações
+
+Resumos anotações e conceitos:
+
+➡️ [View code](./notes)
 ## Kanban
 
 ### 🔴 Próximos tópicos
