@@ -1,4 +1,4 @@
-# Jwt (JSON Web Token)
+# 🔷 Jwt (JSON Web Token)
 
 ## O que é
 * Funciona como um crachá, uma comprovação de identidade.
@@ -12,3 +12,20 @@
 ## Usos
 
 * Em cenários de autorização digital
+
+#  🔷 UserDetails e UserDetailsService
+
+## O que é
+
+- UserDetails é uma interface que representa um usuário no sistema
+- UserDetailsService também é uma interface que busca um usuário dentro de um banco de dados.
+- Fazem parte do Spring Security.
+
+## Pra que serve
+
+- Autenticação de  usuário
+
+## Usos
+
+- Em Login: Cliente envia  username e senha, o spring usa o UserDetailsService para buscar o usuário,
+  retorna um UserDetails, a senha é validada.
