@@ -17,13 +17,7 @@ Este é um repositório pessoal, onde meu foco é:
 - Percepção real do meu crescimento.
 - Prática diária.
 - Aprimorar minhas habilidades de resolução de problemas, código limpo e backend.
-## Streak
-![GitHub streak](https://streak-stats.demolab.com/?user=SEU_USUARIO)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/SEU_USUARIO/SEU_REPO)
-![GitHub repo size](https://img.shields.io/github/repo-size/SEU_USUARIO/SEU_REPO)
-![Daily Study](https://img.shields.io/badge/study-daily-blue)
-![Focus](https://img.shields.io/badge/focus-java-orange)
 ## Logs diários
 
 Todas as sessões de estudos estão documentadas aqui:
