@@ -29,3 +29,23 @@
 
 - Em Login: Cliente envia  username e senha, o spring usa o UserDetailsService para buscar o usuário,
   retorna um UserDetails, a senha é validada.
+
+#  🔷 Cookies
+
+## O que é
+
+- Pequeno arquivo de texto que é gravado no computador quando o usuário acessa um site
+e é reenviado a esse mesmo site quando novamente acessado.
+
+## Pra que serve
+
+- Armazenamento de tokens
+- Manter informações sobre o usuário
+(carrinho de compras, lista de produtos e preferências de navegação)
+
+
+## Usos
+
+- Autenticação com sessão (JSESSIONID)
+- Autenticação stateless usando JWT armazenado em cookie.
+- Salvar preferências do usuário.
