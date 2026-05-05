@@ -52,4 +52,48 @@ Consiste na alteração do funcionamento interno de um método herdade de um obj
 o atributo "@Override" é necessário para isso.
 
 
+# 🔷 Modificadores de Acesso
+     Modificadores de acesso são usados para determinar quem tem a permissão para usar aquele trecho de código.
+     É importante  para manter o código seguro e limpo, uma dica é sempre usar o acesso mais restrito que faça sentido
+     para um membro em particular, nunca deixe todos os membros público.
+      
+## Os modificadores de acesso
 
+* Private: Permissão de acesso apenas dentro da própria classe
+* Package-private (default): Permissão de acesso para todas as classes dentro do mesmo package.
+* Protected: Permissão de acesso para classes no mesmo package ou por subclasses.
+* Public: Permissão de acesso pra todas as classes em qualquer local.
+
+### Private 
+
+Campos private são usados para proteger dados, e não são acessíveis diretamente de fora
+Esse modificador é muito usado para atributos, garantindo o encapsulamento. Em vez de usar 
+diretamente, você expõe métodos controlados (getters/setters). Reduzindo bugs e mantendo controle
+sobre o objeto.
+
+    private String senha;
+
+### Package-private (default)
+Acessível apenas dentro do mesmo pacote, não pode ser acessado fora do pacote.
+Ele é útil quando você quer que várias classes relacionadas(mesmo pacote) compartilhem informações, sem expor isso para
+o restante do sistema. Organiza melhor o código internamente, especialmente em projetos com múltiplos pacotes.
+
+
+    String endereço;
+
+### Protected
+Pode ser acessado dentro da mesma classe, no mesmo pacote e por subclasses.
+É um meio-termo entre private e public, muito útil quando está trabalhando com herança, pois permite que classes filhas
+reutilizem e modifiquem comportamentos de classe pai sem expor esses dados para todo o sistema.
+
+    protected String email;
+
+### Public
+Pode ser acessado de qualquer lugar, inclusive dos outros pacotes.
+É usado quando você quer expor algo como parte da "interface" do seu sistema.
+Geralmente em projetos reais métodos de controllers e services geralmente são public,
+pois precisam ser acessados por outras camadas da aplicação.
+
+    public class Usuario {
+        public String nome;
+    }
