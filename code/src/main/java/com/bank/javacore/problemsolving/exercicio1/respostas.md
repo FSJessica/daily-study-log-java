@@ -20,3 +20,14 @@
 ---
 ## 🔹 Respostas 🔹
 
+Erros encontrados:
+* A instanciação "Animal animal = new Cachorro();" esperava um argumento String que não foi passado.
+* O método emitirSom() em Animal, não possuia parâmetros.
+* Animal exige um nome no construtor, mas nãoes tava repassando isso para o construtorde Cachorro.
+* i<= numeros.length estava gerando ArrayIndexOutOfBoundsException
+
+Correção:
+* Adicionar Argumento na instanciação da classe Cachorro no main.
+* Adicionar parâmetro no método emitirSom
+* Adicionar super(nome) no construtor de cachorro
+* trocar <= por <
