@@ -97,3 +97,36 @@ pois precisam ser acessados por outras camadas da aplicação.
     public class Usuario {
         public String nome;
     }
+
+# 🔷 Interfaces:
+
+    Uma interface é uma coleção de métodos que descrevem o comportamento de um objeto.
+    Para implementar uma interface, um objeto deve implementar todos os métodos dela.
+    É como um “contrato” que outras classes devem seguir. Diz quais métodos devem existir,
+    mas não como serão implementados e não criam objetos.
+
+### Exemplo:
+
+    public interface Animal{
+
+        void emitirSom();
+    
+    }
+
+### Implementando:
+
+    public class Cachorro implements Animal{
+
+        @Override
+        public void emitirSom(){
+            System.out.println("Au au");
+        }
+    }
+
+### Utilidade:
+
+* Padronização: Garante que classes possuam métodos específicos.
+* Desacoplamento: Permite um código flexível.
+* Polimorfismo: Pode tratar objetos diferentes da mesma forma.
+* Arquitetura profissional: Funcionam muito bem com frameworks importantes, como o spring, hibernate, jpa
+
