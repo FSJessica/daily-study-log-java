@@ -19,7 +19,7 @@
 
 //código corrigido
 
-package main.java.com.bank.javacore.problemsolving.exercicio1;
+package main.java.javacore.problemsolving.exercicio1;
 
 public class Animal {
 
