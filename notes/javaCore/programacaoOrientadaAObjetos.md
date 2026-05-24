@@ -130,3 +130,50 @@ pois precisam ser acessados por outras camadas da aplicação.
 * Polimorfismo: Pode tratar objetos diferentes da mesma forma.
 * Arquitetura profissional: Funcionam muito bem com frameworks importantes, como o spring, hibernate, jpa
 
+# 🔷 Construtores:
+
+Qualquer classe Java tem um construtor, esses são métodos especiais que inicializam instâncias (um novo objeto) da classe.
+Um construtor de uma classe é invocado quando uma instância é criada usando a palavra-chave "new".
+Se uma classe não tiver construtores explícitos, o compilador java provê um construtor sem argumento por default.
+
+Um método construtor:
+- Deve ter o mesmo nome da classe que o contém.
+- Não pode ter nenhum tipo de retorno (nem mesmo void).
+
+Exemplo:
+
+    class Patient {
+    
+        String name;
+        int age;
+        float height;
+    
+        public Patient(String name, int age, float height){
+            this.name = name;
+            this.age = age;
+            this.height = height;
+        }
+    }
+
+Para inicializar os campos, a palavra-chave "this" é usada, comumente para diferenciar o atributo da classe e o
+parâmetro do construtor.
+
+
+Criando as instâncias da classe usando o construtor escrito:
+
+    Patient patient1 = new Patient ("Heinrich", 40, 182.0f);
+    Patient patient2 = new Patient ("Mary", 33, 171.5f);
+
+Também é possível definir valores default pra os campos da classe. Exemplo:
+
+    class Patient {
+    
+        String name;
+        int age;
+        float height;
+    
+        public Patient() {
+            this.name = "Unknown";
+        }
+    }
+
