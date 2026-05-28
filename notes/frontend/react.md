@@ -52,3 +52,24 @@ Usando o component:
             }
             
             export default App;
+
+#  🔷 React components
+
+Props(Properties) são valores enviados de um component pai para um component filho.
+Atuam como argumentos de função, são imutáveis dentro do componente que as recebe, garantindo que os dados fluam de forma previsível e unidirecional.
+Vantagens:
+- Reutilização
+- components dinâmicos
+- comunicação entre components
+
+Exemplo:
+
+    function Saudacao(props) {
+        return <h1>Olá {props.nome}</h1>;
+    }
+
+Usando componentes com props:
+    
+    <Saudacao nome="Maria" />
+
+
