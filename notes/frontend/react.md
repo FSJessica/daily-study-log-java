@@ -73,3 +73,34 @@ Usando componentes com props:
     <Saudacao nome="Maria" />
 
 
+#  🔷 React hooks
+
+São funções especiais do React que permitem adicionar funcionalidades aos components.
+Eles começam com "use" e só podem ser usados dentro de components do React ou hooks customizados.
+
+
+Os hooks são usados para:
+- guardar estado
+- reagir a mudanças
+- acessar ciclo de vida
+- compartilhar lógica
+
+Hooks famosos:
+- useState
+- useEffect
+- useRef
+- useContext
+- useMemo
+- useCallback
+
+# 🔷 State
+
+State em React é uma forma do react component guardar uma informação que pode mudar com o tempo e precisa ser lembrada.
+
+### Porque não usar então apenas as variáveis?
+
+A magia do state no react é que sempre que mudar, o react sabe automaticamente rederizar novamente o component (ou partes dele) para refletir as mudanças na UI.
+
+### No que difere dos props?
+
+Os props são como configurações ou atributos que você passa para um component. E eles são apenas de leitura.
