@@ -1,4 +1,4 @@
-# 🔷 O são Arrays?
+8# 🔷 O são Arrays?
 
 Em Java é possível você processar múltiplos objetos do mesmo tipo, salvando eles num array.
 Um Array é uma coleção de elementos do mesmo tipo. Os elementos são armazenados na memória sequencialmente.
@@ -57,3 +57,62 @@ Indexes de um array tem números de 0 -1. Você pode acessar os valores buscando
 Se tentar acessar um valor em um index inexistente, o programa joga o erro:
 
     ArrayIndexOutOfBoundsException.
+
+## Processando Arrays Usando loops
+
+É de grande utilidade processar Arrays através de um loop.
+Exemplo:
+
+    int n = 10;
+    int[] squares = new int[n];
+
+    System.out.println(Arrays.toString(squares));
+
+    /* iterando o array */
+    for (int i = 0; i < squares.length; i++) {
+        squares[i] = i * i;
+    }
+    System.out.println(Arrays.toString(squares));
+    // [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Também é possível usar while e do while para iterar Arrays, apesar de ser menos comum. 
+
+## Usando for-each loop
+
+É usado para iterar sobre cada elemento do array, string ou collection, com ele não precisa lidar com índices. 
+Tem algumas limitações também, por exemplo, com for each você não pode modificar um array porque a variável que se usa na iteração não contém o elemento de fato, apenas a cópia. Você também não pode recuperar um elemento pelo index, já que o index não é utilizado. Também não é possível mover pelo array mais de um passo por iteração, precisa ser por cada elemento, um por um.
+
+Exemplo: 
+
+
+    for (type var : array) { 
+        //statements using var
+    }
+
+Uma comparação entre for-each e for:
+
+FOR-EACH:
+
+    char[] characters = { 'a', 'b', 'c', 'a', 'b', 'c', 'a' };
+
+    int counter = 0;
+    for (char ch : characters) {
+        if (ch == 'a') {
+            counter++;
+        }
+    }
+
+    System.out.println(counter); // output "3"
+
+FOR:
+
+    char[] characters = {'a', 'b', 'c', 'a', 'b', 'c', 'a'};
+
+    int counter = 0;
+    for (int i = 0; i < characters.length; i++) {
+        if (characters[i] == 'a') {
+            counter++;
+        }
+    }
+
+    System.out.println(counter); // output "3"
