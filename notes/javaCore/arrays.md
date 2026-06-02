@@ -1,4 +1,4 @@
-8# 🔷 O são Arrays?
+# 🔷 O são Arrays?
 
 Em Java é possível você processar múltiplos objetos do mesmo tipo, salvando eles num array.
 Um Array é uma coleção de elementos do mesmo tipo. Os elementos são armazenados na memória sequencialmente.
@@ -116,3 +116,60 @@ FOR:
     }
 
     System.out.println(counter); // output "3"
+
+## Arrays multidimensional
+
+Podemos dizer que Arrays multidimensional são Arrays dentro de Arrays, ou seja, pra criar um array multidimensional devemos pensar em um array como elemento de outro array. Pode ser útil para representar objetos 3D com comprimento, altura e largura.
+
+### Array bidimensional
+
+Um array bidimensional pode ser representada como uma matriz ou tabela.
+Exemplo:
+
+    int[][] twoDimArray = {
+            {0, 0, 0}, // first array of ints
+            {0, 0, 0}, // second array of ints
+            {0, 0, 0}  // third array of ints
+    };
+
+### Acessando os elementos
+
+Pode ser acessada buscando dois índices,um índice do elemento do array principal e outro do array aninhado.
+
+### Usando for loops pra criar Arrays 2d
+
+Uma das maneiras mais populares de criar Arrays 2d é com forloops.
+Exemplo:
+
+    int[][] twoDimArray = new int[2][10];
+
+    for (int i = 0; i < twoDimArray.length; i++) {
+        for (int j = 0; j < twoDimArray[i].length; j++) {
+            twoDimArray[i][j] = 1;
+        }
+    }
+
+Printando o array
+
+    for (int i = 0; i < twoDimArray.length; i++) {
+         System.out.println(Arrays.toString(twoDimArray[i]));
+    }
+
+### Arrays multidimensionais >2
+
+Um array tridimensional pode ser representado por um Cubo, com comprimento, altura e largura.
+
+Exemplo:
+
+    int[][][] threeDimArray = new int[2][3][4];
+
+    int element = 0;
+
+    for (int i = 0; i < threeDimArray.length; i++) {
+        for (int j = 0; j < threeDimArray[i].length; j++) {
+            for (int k = 0; k < threeDimArray[i][j].length; k++) {
+                threeDimArray[i][j][k] = element;
+            }
+            element++;
+        }
+    }
