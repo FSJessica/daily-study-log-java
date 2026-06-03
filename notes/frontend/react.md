@@ -96,6 +96,17 @@ Hooks famosos:
 # 🔷 State
 
 State em React é uma forma do react component guardar uma informação que pode mudar com o tempo e precisa ser lembrada.
+É um valor armazenado pelo componente que pode mudar ao longo do tempo. Quando ele muda, o React atualiza a interface automaticamente.
+
+Exemplos de state:
+
+- contador
+- texto de um input
+- usuário logado
+- carrinho de compras
+- menu aberto/fechado
+- lista de tarefas
+- tema claro/escuro
 
 ### Porque não usar então apenas as variáveis?
 
