@@ -115,3 +115,15 @@ A magia do state no react é que sempre que mudar, o react sabe automaticamente 
 ### No que difere dos props?
 
 Os props são como configurações ou atributos que você passa para um component. E eles são apenas de leitura.
+
+| Parâmetro de Comparação |                                         State                                          |                                                                                                 Props |
+|:------------------------|:--------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------------------------:|
+| Definição               |  Específico de um componente e determina como esse componente renderiza e se comporta  | Abreviação de "Properties", uma forme de passar dados de um componente pai, para um componente filho. |
+| Imutabilidade           |                        Mutável: Componentes podem mudar o state                        |                                       Imutável: Componentes não podem mudar os props, apenas usá-los. |
+| Data Flow               | Local ao Component: Esrtutura de dados que podem mudar com o tempo devido a interações |                                                            Data flow de via única, de pai para filho. |
+| Exemplo                 |                         const [count, setCount] = useState(0);                         |                                                                            <Welcome name = "React" /> |
+| Caso de uso             |                       Dado que irão modificar( ex: user input).                        |                                         Dados que não devem mudar e não mudarão pelo component filho. |
+
+
+
+
