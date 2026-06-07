@@ -88,6 +88,13 @@ Os hooks são usados para:
 Hooks famosos:
 - useState
 - useEffect
+  - Executa efeitos colaterais em componentes funcionais. Exemplos: busca de dados de uma API, alterar o título da página, adicionar eventos ao navegador, executar algo quando um state muda, iniciar ou limpar timers(setInterval, setTimeout).
+    - Sintaxe:
+  
+          useEffect(() => {
+            //código
+          }, [dependency]);
+
 - useRef
 - useContext
 - useMemo
