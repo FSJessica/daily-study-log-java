@@ -86,8 +86,10 @@ Os hooks são usados para:
 - compartilhar lógica
 
 Hooks famosos:
-- useState
-- useEffect
+
+### useState
+
+### useEffect
   - Executa efeitos colaterais em componentes funcionais. Exemplos: busca de dados de uma API, alterar o título da página, adicionar eventos ao navegador, executar algo quando um state muda, iniciar ou limpar timers(setInterval, setTimeout).
     - Sintaxe:
   
@@ -95,7 +97,13 @@ Hooks famosos:
             //código
           }, [dependency]);
 
-- useRef
+## useRef
+
+Cria uma referência persistente que continua existindo entre as renderizações do componente.
+Enquanto o useState guarda dados e atualiza a tela quando muda, o useRef guarda uma referência ou valor, não atualiza a rela quando muda, e é muito usado para acessar elementos HTML.
+Use State guarda dados para exibir na interface, useRef guarda referências e valores nternos sem causar nova renderização.
+
+
 - useContext
 - useMemo
 - useCallback
