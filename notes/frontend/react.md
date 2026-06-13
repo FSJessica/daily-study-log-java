@@ -140,5 +140,72 @@ Os props são como configurações ou atributos que você passa para um componen
 | Caso de uso             |                       Dado que irão modificar( ex: user input).                        |                                         Dados que não devem mudar e não mudarão pelo component filho. |
 
 
+# Prop
+
+Abreviação de (properties) são a forma de passar dados de um componente para outro.
+
+Exemplo: 
+
+Quando você escreve:
+
+    <Pessoa nome="Jessica" />
+
+O React cria um objeto parecido com:
+    
+    props = {
+        nome: "Jessica"
+    }
+
+Então dentro do componente:
+
+    props.nome
+
+Guarda: 
+
+    Jessica
 
 
+## Prop Drilling
+
+Acontece quando você precisa passar uma prop por vários componentes intermediários apenas para que ela chegue a um componente mais profundo.
+Se um componente tem um dado  no topo e você precisa dele lá embaixo, você fica repassando a prop de pai pra filho, de filho pra neto, mesmo que esses componentes intermediários não usem o dado.
+
+Exemplo:
+
+Nesta árvore:
+
+    -App
+        -Header
+            -Menu
+                -User Info
+
+O nome do usuário está em App mas UserInfo que precisa dele.
+
+App:
+
+    function App() {
+        const nome = "Jessica";
+
+        return <Header nome={nome} />;
+    }
+
+Header:
+
+    function Header({ nome }) {
+        return <Menu nome={nome} />;
+    }
+
+Menu:
+
+    function Menu({ nome }) {
+        return <UserInfo nome={nome} />;
+    }
+
+UserInfo
+
+    function UserInfo({ nome }) {
+        return <h1>{nome}</h1>;
+    }
+
+Apesar de Header e Menu não usarem nome, eles repassam a prop para UserInfo. Se a árvore for muito grande, pode ser difícil de manter e repetitivo,
+para resolver esse problema, geralmente se usa o Hook useContext com a Context API
