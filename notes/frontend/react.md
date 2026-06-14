@@ -104,9 +104,50 @@ Enquanto o useState guarda dados e atualiza a tela quando muda, o useRef guarda 
 Use State guarda dados para exibir na interface, useRef guarda referências e valores nternos sem causar nova renderização.
 
 
-- useContext
-- useMemo
-- useCallback
+## useContext
+
+Permite que um componente acesse dados compartilhados sem precisar receber props, podem ser úteis para coisas como:
+usuário logado, tema claro/escuro, idioma, carrinho de compras, configurações globais.
+
+Com context o exemplo usado em prop drilling ficaria assim:
+
+    App
+        └─ Header
+            └─ Menu
+                └─ UserInfo
+                        ↑
+                pega do Context
+
+
+Criando o Context
+
+    import { createContext } from 'react';
+    
+    const UserContext = createContext();
+
+Fornecer os dados
+
+    function App() {
+        return (
+            <UserContext.Provider value="Jessica">
+                <Header />
+            </UserContext.Provider>
+        );
+    }
+
+Consumir com useContext
+
+    import { useContext } from 'react';
+
+    function UserInfo() {
+        const nome = useContext(UserContext);
+
+        return <h1>{nome}</h1>;
+    }
+
+## useMemo
+
+## useCallback
 
 # 🔷 State
 
