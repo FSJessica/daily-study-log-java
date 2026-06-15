@@ -89,6 +89,21 @@ Hooks famosos:
 
 ### useState
 
+O Hook mais importante do react, permite que um componente guarde informações que podem mudar ao longo do tempo.
+É como a memória do componente, guardando os dados e avisando ao react quando esses dados mudam para que a interface seja atualizada.
+
+
+Sintaxe:
+
+    const [count, setCount] = useState(0);
+
+useState(0)
+
+O 0 é o valor inicial.
+
+    useState(0)
+significa: crie um estado que começa valendo 0.
+
 ### useEffect
   - Executa efeitos colaterais em componentes funcionais. Exemplos: busca de dados de uma API, alterar o título da página, adicionar eventos ao navegador, executar algo quando um state muda, iniciar ou limpar timers(setInterval, setTimeout).
     - Sintaxe:
