@@ -164,6 +164,26 @@ Consumir com useContext
 
 ## useCallback
 
+## custom Hooks
+
+São funções que permitem que você reuse uma lógica através de múltiplos componentes.
+A convenção é que se deve iniciar com "use".
+
+Exemplo:
+
+    function useContador() {
+        const [count, setCount] = useState(0);
+
+        return { count, setCount };
+    }
+
+Usar um custom Hook evita que você precise ficar repetindo código.
+
+Crie um quando:
+
+- Precisar evitar repetições de código;
+- Quiser separar a lógica da interface;
+- Deixar os componentes menores e mais legíveis.
 # 🔷 State
 
 State em React é uma forma do react component guardar uma informação que pode mudar com o tempo e precisa ser lembrada.
