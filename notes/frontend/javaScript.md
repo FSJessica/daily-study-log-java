@@ -64,3 +64,14 @@ Com axios a configuração é centralizada, você pode criar uma instância com 
 O axios tem Timeout nativo, sendo fácil definir tempo máximo de espera.
 
 O fetch pode ser utilizado em projetos simples, ou quando não precisa adicionar dependências, ou quando já vem nativo no navegador, porém axios é mais prático, possui melhor tratamento de erros, interceptadores e configutação centralizada.
+
+## Interceptors
+
+São funções que permitem executar código antes de uma requisição ser enviada ou depois de uma resposta recebida.
+
+Eles são muito usados para:
+
+- Adicionar tokens de autenticação automaticamente.
+- Registrar logs
+- tratar erros globalmente
+- Modificar requisições e respostas
