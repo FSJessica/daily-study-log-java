@@ -285,3 +285,16 @@ UserInfo
 
 Apesar de Header e Menu não usarem nome, eles repassam a prop para UserInfo. Se a árvore for muito grande, pode ser difícil de manter e repetitivo,
 para resolver esse problema, geralmente se usa o Hook useContext com a Context API
+
+
+## Forms
+
+Biblioteca que facilita a criação, validação e gerenciamento de formulários em React usando hooks, reduzindo a necessidade de múltiplos estados (useState).
+
+Não é necessário criar vários States. Você pode gerenciar tudo com "useForm"
+
+Vantagens:
+- Menos código
+- Melhor performance
+- Validação de campos integrada
+- Muito usado em projetos React profissionais.
