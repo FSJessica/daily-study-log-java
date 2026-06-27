@@ -298,3 +298,7 @@ Vantagens:
 - Melhor performance
 - Validação de campos integrada
 - Muito usado em projetos React profissionais.
+
+# 🔷 Tailwind css
+
+
