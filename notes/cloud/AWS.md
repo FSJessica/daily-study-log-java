@@ -62,3 +62,57 @@ aplicações legadas devem permanecer on-premises devido às preferências de ma
 
 - atualização de softwares de conputação, armazenamento, banco de dados e redes
 - infraestrutura global da AWS e hardware(regiões AZs e locais de borda)
+
+## Amazon Elastic Compute Cloud (EC2)
+
+- Altamente flexível
+- Econômico
+- Rápido
+
+### Multilocação
+
+Compartilhamento dos recursos fornecidos pelo host
+
+- Escalar verticalmente : aumentar ou diminuir o tamanho das instâncias conforme necessidade.
+- Escalar horizontalmente:
+
+## Famílias do Amazon(EC2)
+
+- Uso geral: 
+  - Equilíbrio de recursos
+  - cargas de trabalho diversas
+  - serviços web
+  - repositórios de código
+
+- Otimizadas para computação:
+  - Tarefas com uso intensivo de computação
+  - servidores de jogos
+  - computação de alto desempenho (HPC)
+  - tarefas de aprendizado de máquina
+  - modelagem científica
+  
+- Otimizadas para memória:
+  - tarefas com uso intensivo de memória
+
+- Computação acelerada
+  - cálculos de ponto flutuante
+  - processamento grafico
+  - correspondência de padrões de dados
+  - aceleradores de hardware
+  
+- Otimizadas para armazenamento
+  - alto desempenho pradados armazenados localmente
+
+## Interagindo com serviços da AWS
+
+- Console de gerenciamento da AWS
+  - configura ambientes de testes
+  - visualizar faturas da aws
+  - monitorar recursos
+  - gerenciar tarefas não técnicas
+  
+- Interface de linha de comando da AWS(CLI)
+  - automatizar tarefas por meio de scripts
+  
+- Kit de desenvolvimento de software (SDK)
+  -integração dos serviços da aws em suas aplicações fornecendo APIs para várias linguagens de programação
