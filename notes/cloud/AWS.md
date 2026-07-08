@@ -101,7 +101,7 @@ Compartilhamento dos recursos fornecidos pelo host
   - aceleradores de hardware
   
 - Otimizadas para armazenamento
-  - alto desempenho pradados armazenados localmente
+  - alto desempenho pra dados armazenados localmente
 
 ## Interagindo com serviços da AWS
 
@@ -116,3 +116,80 @@ Compartilhamento dos recursos fornecidos pelo host
   
 - Kit de desenvolvimento de software (SDK)
   -integração dos serviços da aws em suas aplicações fornecendo APIs para várias linguagens de programação
+
+## O que é AMI
+
+Imagens de máquina da amazon (AMI - amazon machine image) pode ser definida como um modelo pré-configurado de máquina virtualque já inclui todos os elementos essenciais para a criação de uma nova instância
+
+## componentes
+
+sistema operacional
+estrutura de armazenamento
+definição de arquitetura
+permissões para o lançamento da instância
+aplicações de software previamente instaladas
+
+* obs.: a partir de uma ṕunica AMI é possṕivel implantar múltiplas instâncias EC2
+
+## 3 maneiras de usar AMI
+
+criar a sua própria AMI
+usar AMIs da AWS disponíveis
+comprar no AWS marketplace
+
+## Repetibilidade da AMI
+mesma configuração -> implantações automatizadas -> ambientes consistentes -> scaling com confiança
+
+## Opções de cobrança do EC2
+- sob demanda - paga conforme capacidade computacional que sua aplicação consome
+- saving plans - preços mais baixos (72% desconto) em troca de um compromisso de 1 a 3 anos (é possível alterar o tamanho da EC2)
+- instâncias reservadas - (75% desconto) para cargas de trabalho instável e previsível (não altera tamanho de EC2) 1 ou 3 anos
+- instâncias spots - (90% desconto) AWS pode recuperar instâncias a qualquer momento e cliente recebe aviso de 2 minutos para salvar o progresso
+- hosts dedicados - servidor físico real para reserver para uso exclusivo
+- instâncias dedicadas - instância dedicada exclusiva isolando operações de outros clientes da aws
+
+## Escalabilidade vs Elasticidade
+
+escalabilidade é a capacidade do sistema ser expandido ao longo do tempo. habilidade para suportar uma carga de trabalho crescente por meio de adição de mais recursos.
+ - escala vertical: aumenta o poder de processamento das máquinas atuais
+ - escala horizontal: adição (scale out) ou remoção (scale in) de novas máquinas à infraestrutura
+elasticidade trata do ajuste dinâmico de recursos para atender demandas momentâneas. permite o sistema aumentar ou diminuir recursos de forma automatizada em resposta às variações de demanda em tempo real
+
+## Amazon EC2 Auto Scaling
+
+Ajusta automaticamente o número de instâncias com base nas mudanças na demanda da aplicação.
+ - escalonamento dinâmico - se ajusta em tempo real às flutuações de demanda.
+ - escalonamento preditivo - agenda preditivamente o número certo de instâncias previstas
+
+### Groupo deauto scaling
+
+precisa ter três configurações principais:
+ - capacidade mínima - menor número de instâncias necessárias para manter a aplicação executando
+ - capacidade desejada
+ - capacidade máxima
+
+## Elastic Loud Balancing (ELB)
+
+Serve para distribuir de forma automática o fluxo de tráfego de uma aplicação entre diversos recursos com o objetivo de otimizar o desempenho e a confiabilidade
+atua como ponto centralizado de entrada para todo o trafégo web.
+principais benefícios:
+ - distribuição eficiente de tráfego
+ - auto scaling
+ - gerenciamento simplificado
+
+métodos de roteamento:
+ - round robin
+ - menor número de conexões
+ - hash de ip
+ - menor tempo de resposta
+
+## Amazon EventBridge
+serviço com tecnologia sem servidor (serverless) que conecta diferentes partes da aplicação usando eventos
+serve para quando existem etapas intermediárias entre o começo e o fim, que serão acionadas (eventos)
+
+## Amazon Simple Queue Service (SQS)
+enfileiramento de mensagens projetado para estabelecer uma comunicação de alta confiabilidade entre diferentes componentes de software
+permite o envio, armazenamento e recebimento de mensagens com garantia de que nenhuma mensagem será perdida
+
+## Amazon Simple Notification Service (SNS)
+opera com base no modelo de publicação/assinatura. publicadores enviam mensagens para múltiplos assinantes por meio de canais centralizados
