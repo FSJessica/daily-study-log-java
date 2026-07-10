@@ -177,3 +177,166 @@ Também é possível definir valores default pra os campos da classe. Exemplo:
         }
     }
 
+# Princípios SOLID
+
+São os cinco princípios que facilitam o processo de desenvolvimento, a manutenção e a expansão do software.
+
+## S — Single Responsibility Principle 
+### (Princípio da responsabilidade única)
+
+As classes e métodos devem ter responsabilidades únicas. Quanto mais tarefas um método/classe
+executa, mais difícil é testá-lo e garantir que o programa está em ordem.
+
+Exemplo: 
+
+    public class GerenciadorTarefas {
+        public String conectarAPI(){
+            //...
+        }
+        public void criarTarefa(){
+            //...
+        }
+        public void atualizarTarefa(){
+            //...
+        }
+        public void removerTarefa(){
+            //...
+        }
+        public void enviarNotificacao(){
+            //...
+        }
+        public void produzirRelatorio(){
+            //...
+        }
+        public void enviarRelatorio(){
+            //...
+        }
+    }
+
+O problema desse código é que há muitas funções atribuídas a classe GerenciadorTarefas, que não tem relação com o
+gerenciamento de tarefas.
+O princípio da responsabilidade única pode resolver essa situação, atribuindo a classe GerenciadorTarefas apenas os
+métodos criarTarefa, atualizarTarefa, removerTarefa. Para os outros métodos, o ideal é criar classes correspondentes. 
+
+Esse princípio, traz principalmente:
+- Facilidade para fazer manutenções
+- Reusabilidade das classes
+- Facilidade para realizar testes
+- Simplificação da legibilidade do código
+
+## O — Open-Closed Principle
+### (Princípio Aberto-Fechado)
+
+As entidades de software (como classes e métodos) devem estar abertas para extensão, mas fechadas para modificação.
+O ideal é adaptar o código não para alterar a classe, mas para estendê-la.
+
+Exemplo:
+Digamos que nessa clínica, existe uma classe que trata das solicitações de exames. Inicialmente, o único exame possível
+é o exame de sangue.
+
+    public class AprovaExame {
+        public void aprovarSolicitacaoExame(Exame exame){
+            if(verificaCondicoesExameSangue(exame))
+                System.out.println("Exame aprovado!");
+        }
+        public boolean verificaCondicoesExameSangue(){
+            //....
+        }
+    }
+
+Se precisarmos incluir uma nova funcionalidade ao sistema como exames de Raio-X, ultrassons, etc...
+Como incluir isso no nosso código? Seguindo a lógica, iríamos adicionar mais um if no código e mais um método para olhar
+condições específicas do exame, deixando a classe e o projeto mais complexo.
+
+Uma solução aplicando o princípio aberto-fechado:
+
+    public interface AprovaExame{
+        void aprovarSolicitacaoExame(Exame exame);
+        boolean verificaCondicoesExame(Exame exame);
+    }
+    public class AprovaExameSangue implements AprovaExame{
+        @Override
+        public void aprovarSolicitacaoExame(Exame exame){
+            if(verificaCondicoesExame(exame))
+                System.out.println("Exame sanguíneo aprovado!");
+        }
+        @Override
+        boolean verificaCondicoesExame(Exame exame){
+            //....
+        }
+    }
+    public class AprovaRaioX implements AprovaExame{
+        @Override
+        public void aprovarSolicitacaoExame(Exame exame){
+            if(verificaCondicoesExame(exame))
+                System.out.println("Raio-X aprovado!");
+        }
+        @Override
+        boolean verificaCondicoesExame(Exame exame){
+            //....
+        }
+    }
+Assim sempre será possível implementar a interface AprovaExame ao adicionarmos recursos. Essa interface, no entanto, 
+não muda. Estamos estendendo-a, mas não alterando.
+
+## L — Liskov Substitution Principle
+### (Princípio da substituição de Liskov)
+
+Classes derivadas (ou classes-filhas) devem ser capazes de substituir suas classes-base (ou classes-mães) Ou seja, uma
+classe-filha deve ser capaz de executar tudo que sua classe-mãe faz. Esse princípio se conecta com o polimorfismo e 
+reforça esse pilar da POO.
+
+Exemplo:
+
+Veja esse sistema de uma faculdade:
+
+    public class Estudante {
+        String nome;
+        public Estudante(String nome) {
+            this.nome = nome;
+        }
+        public void estudar() {
+            System.out.println(nome + " está estudando.");
+        }
+    }
+
+    public class EstudanteDePosGraduacao extends Estudante {
+        @Override
+        public void estudar() {
+            System.out.println(nome + " está estudando e pesquisando.");
+        }
+    }
+
+Se tivermos que adicionar a funcionalidade entregarTCC(), colocariamos esse método na classe estudante.
+O problema é que normalmente, estudantes de pós-graduação não entregam TCCs, mas deveria apresentar todos os 
+comportamentos da classe Estudante, pois é classe filha.
+Uma solução seria modificar a nossa modelagem. Criando a classe EstudanteDeGraduação
+
+    public class EstudanteDeGraduacao extends Estudante {
+        public void estudar() {
+            System.out.println(nome + " está estudando na graduação.");
+        }
+        public void entregarTCC() {
+            //…
+        }
+    }
+
+Assim, não estamos forçando uma classe a fazer algo que ela originalmente não faz.
+Aplicar esse princípio nos traz diversos benefícios, especialmente para ter uma modelagem mais fiel à realidade,
+reduzir erros inesperados no programa e simplificar a manutenção do código.
+
+
+## I — Interface Segregation Principle
+### (Princípio da Segregação da Interface)
+
+Uma classe não deve ser forçada a implementar interfaces e métodos que não serão utilizados.
+Seguir o Princípio da Segregação da Interface ajuda a promover a coesão e a flexibilidade em nossos sistemas,
+tornando-os fáceis de manter e estender.
+
+## D — Dependency Inversion Principle
+### (Princípio da inversão da dependência)
+
+É recomendado que os módulos de alto nível não dependam diretamente dos detalhes de implementação de módulos de
+baixo nível.
+
+A adesão ao Princípio de Inversão de Dependência promove a flexibilidade e a extensibilidade dos nossos sistemas.
