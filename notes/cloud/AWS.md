@@ -193,3 +193,70 @@ permite o envio, armazenamento e recebimento de mensagens com garantia de que ne
 
 ## Amazon Simple Notification Service (SNS)
 opera com base no modelo de publicação/assinatura. publicadores enviam mensagens para múltiplos assinantes por meio de canais centralizados
+
+## Tipos de gerenciamento
+### Gerenciado
+você tem um serviço pré-configurado para dar mais conveniencia
+### Não-gerenciado
+você tem total responsabilidade para personalizar o serviço
+### Serverless
+(sem servidor) você não pode ver ou acessar a infraestrutura subjacente
+
+## AWS Lambda
+um serviço que executa código em resposta a eventos sem necessidade de provisionar ou gerenciar servidores
+
+## Amazon Elastic Container Service (ECS)
+- simplificado e integrado
+- possibilidade de definir parâmetros
+- serviço totalmente gerenciado
+
+## Amazon Elastic Kubernetes Service (EKS)
+- plataforma de código aberto
+- mais complexa
+- mais controle e flexibilidade
+
+## Amazon Elastic Container Registry (ECR)
+- registro de conteineres totalmente gerenciado
+- armazena imagens de conteiner
+
+## Amazon Fargate
+alternativa de computação serverless para usar quando não quer configurar os serviços EC2
+
+### Como as peças se encaixam
+- carrega as imagens de conteineres no ECR
+- escolha um serviço de orquestração com base no que precisa (ECS ou EKS)
+- escolha a opção de computação (EC2 ou Fargate)
+
+## AWS Elastic Beanstalk
+- provisionamento simplificado
+- gerenciamento de configurações
+- visibilidade e controle
+
+## AWS Batch
+- gerenciamento de infraestrutura
+- suporte à processamento paralelo
+- escalabilidade automática
+
+## Amazon Lightsail
+- simplicidade
+- bom custo benefício
+- infraestrutura gerenciada
+
+## AWS Outposts
+- solução de nuvem híbrida
+- ambientes consistentes
+- baixa latência e residência de dados
+
+## escolha de regiões AWS: considerações
+- conformidade - devem permanecer dentro dos requisitos de uma área
+- proximidade - deve escolher uma proximidade mais próxima dos clientes
+- disponibilidade de recursos - escolher uma região que tenha todos os recursos necessários
+- preço - alguns locais são mais econômicos para operar
+
+## Amazon CloudFront
+rede de entrega contínua, tem o objetivo de servir o conteúdo mais próximo possível dos usuários. trabalha com locais de borda
+### Locais de borda
+serve como uma memória cache para diminuir a latência na entrega do conteúdo
+
+## CloudFormation
+serviço que ajuda a modelar e configurar os recursos da AWS para que vc gaste menos tempo gerenciando esses recursos e tenha mais tempo para se concentrar nas aplicações executadas na AWS
