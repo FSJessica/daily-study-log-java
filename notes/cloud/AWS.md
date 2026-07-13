@@ -260,3 +260,70 @@ serve como uma memória cache para diminuir a latência na entrega do conteúdo
 
 ## CloudFormation
 serviço que ajuda a modelar e configurar os recursos da AWS para que vc gaste menos tempo gerenciando esses recursos e tenha mais tempo para se concentrar nas aplicações executadas na AWS
+
+## Amazon Virtual Private Cloud (VPC)
+permite provisionar uma seção logicamente isolada da aws em que vc pode executar recursos da aws em uma rede virtual definida por vc
+
+### benefícios VPC
+- aumentar segurança
+- economizar tempo
+- controle de acesso
+
+### Sub-rede
+sub-seção de uma vpn, pública ou privada. privada = usada para conter recursos como banco de dados que armazena informações sensíveis. pública = contém recursos como um site voltado pro cliente
+
+### Gateway de internet
+conexão entre VPC e internet.
+
+### Gateways privados virtuais
+permite que o tráfego protegido da internet ingresse na VPC. precisa de uma conexão de rede privada virtual (virtual private network - VPN).
+
+### VPN (virutal private network)
+criptografa o tráfego na internet para proteger de qualquer pessoa. possibilita estabelecer conexão VPN entre VPC e a rede privada
+
+## AWS Client VPN
+serviço de rede usado para conectar profissionais remotos e redes on-premises na nuvem. fornece autenticação avançada e acesso remoto, é elástica etotalmente gerenciada.
+
+## AWS Site-to-Site VPN
+cria conexão segura entre o data center ou as filiais e seus recursos da nuvem. oferece alta disponibilidade, sessões seguras e privadas e acelera aplicações.
+
+## AWS PrivateLink
+tecnologia altamente disponível e dimensionável que pode ser usada para conectar à VPC de forma privada a serviços e recursos como se estivessem na sua VPC. ajuda a proteger o tráfego e a se conectar com regras de gerenciamento simplificadas.
+
+## AWS Direct Connect
+permite estabelecer uma conexão privada dedicada entre sua rede e à VPC na nuvem. reduz custos de rede e aumenta a quantidade de largura de banda.
+- aplicações sensíveis a latência
+- migração ou transferência de dados em grande escala
+- arquitetura de nuvem híbrida
+
+## Serviços adicionais de gateway
+- AWS Transit Gateway
+- Gateway de conversão de endereços de rede (NAT)
+- Amazon API Gateway
+
+## ACLs de Rede
+firewall virtual que controla o tráfego de entrada e saída no nível da sub-rede. cada conta aws tem uma ACL de rede padrão. ao configurar a VPC, vc pode usar a padrão ou criar ACLs de rede personalizadas.
+- padrão - permite entrada e saída normalmente
+- personalizada - bloqueia entrada e saída até que adicione as regras
+
+obs.: são stateless, não lembram de nada e verifica os pacotes em todos os sentidos: entrada e saída
+
+## Grupos de segurança
+controla o tráfego de entrada e saída no nível do recurso. 
+- padrão - nega todo tráfego de entrada e permite todos de saída
+- personalizada - configura qual tráfego deve ser permitido, qualquer outro tráfego seria negado.
+
+obs.: são statefull, as decisões lembram das decisões anteriores para pacotes recebidos
+
+![img.png](img.png)
+
+## Amazon Route 53
+é um DNS que fornece uma maneira confiável e enonomica de rotear os usuários finais para aplicação de internet.
+capacidade de gerenciar os registros DNS para nomes de domínio, vc pode registrar novos nomes de domínio diretamente no route 53.
+
+## Amazon CloudFront
+é um serviço de rede de entrega de conteúdo (CDN) que entrega o conteúdo com tempos de carregamentos mais rápidos, economia de custos e confiabilidade.
+
+## AWS Global Accelerator
+é um serviço que usa rede global da aws para melhorar a disponibilidade, o desempenho e a segurança das aplicações. ela usa roteamento inteligente de tráfego e failover rápido se algo der errado em um dos locais de sua aplicação.
+
