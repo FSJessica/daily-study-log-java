@@ -327,3 +327,154 @@ capacidade de gerenciar os registros DNS para nomes de domínio, vc pode registr
 ## AWS Global Accelerator
 é um serviço que usa rede global da aws para melhorar a disponibilidade, o desempenho e a segurança das aplicações. ela usa roteamento inteligente de tráfego e failover rápido se algo der errado em um dos locais de sua aplicação.
 
+## Armazenamento
+
+### Armazenamento em bloco
+- divide os dados em partes gerenciáveis chamados blocos
+- podem ser atualizados bloco por bloco, o arquivo inteiro não precisa ser alterado
+- ideal para aplicações ou banco de dados com atualizações rápidas e frequentes
+tipos:
+- armazenamento de instâncias do ec2
+  - sem persistência de dados
+  - benefícios: armazenamento disponível automaticamente, econômico, alto desempenho
+- Amazon Elastic Block Store (EBS)
+  - com persistência de dados
+  - beníficios: migração de dados, alterações no tipo de instância, recuperação de desastres, otimização de custos, ajuste de desempenho
+
+### Armazenamento de objetos
+tipos: Amazon Simple Storage Service (S3)
+- objetos + dados + ID único + metadados
+- requer reescrita do objeto inteiro para cada alteração
+- organizados em estruturas planas chamadas buckets
+- ideal para grandes arquivos que não mudam constantemente
+
+### Armazenamento de arquivos
+tipos: Amazon Elastic File System (EFS), Amazon FSx
+- usa sistema de arquivos hierárquico que pode ser compartilhado por aplicações
+- implantação direta sem modificação de código
+- ideal para aplicações que requerem acesso compartilhado
+
+### Serviços de armazenamento adicionais
+não se encaixam nas opções acima, mas são importantes
+tipos: AWS Storage Gateway, AWS Elastic Disaster Recovery
+
+## Amazon Data Lifecycle Manager
+- programar criação de snapshots
+- definir políticas de retenção
+- gerenciar ciclos de vida
+- aplicar políticas de backup consistentes
+fluxo de trabalho:
+1. criar política de snapshots
+2. selecione o tipo de recurso de destino
+3. excluir volumes
+4. defina horários personalizados
+5. aplique ações adicionais
+
+### Snapshots do EBS
+- snapshots = são backups pontuais do volume do EBS, usado para recuperação de desastres, migração de dados
+- benefícios: proteção e recuperação de dados, flexibilidade operacional, econômico
+
+## Amazon Simple Storage Service (S3)
+- armazene dados como objetos
+- armazene objetos em buckets
+- upload de objetos com até 5tb
+- crie múltiplos buckets
+- versionamento de objetos
+
+benefícios:
+- armazenamento praticamente ilimitado
+- gerenciamento do ciclo de vida de objetos
+- ampla variedade de casos de uso
+
+segurança no S3:
+- acesso privado por padrão
+- políticas de acesso aos buckets
+- urls pré-assinadas
+- pontos de acesso do S3
+- logs de auditoria do S3
+
+## Classes de Armazenamento e casos de uso do S3
+
+### S3 Standard
+armazenamento de uso geral para aplicações em nuvem, é usado por padrão
+
+### S3 Intelligent-Tiering
+é útil se os dados tiverem padrões de acessos desconhecidos, move automaticamente o dado para o padrão mais economico com base na frequencia de acesso. armazena em 3 camadas:
+- acesso frequente
+- pouco frequente
+- acesso instantâneo
+
+### S3 Standard Infrequent-Access (Standard-IA)
+é usado para dados acessados com menos frequência, mas que exigem acesso rápido quando necessário
+
+### S3 One Zone Infrequent-Access (One Zone-IA)
+armazena dados em uma única zona de disponibilidade, reduzindo custos em comparação como Standard-IA
+
+### S3 Express One Zone
+armazena em umna única zona de disponibilidade e foi criado especificamente para fronecer acesso consistente a dados mais frequentes
+
+### S3 Glacier Instant Retrieval
+arquivar dados raramente acessados e que requer recuperação em milissegundos
+
+### S3 Glacier Flexible Retrieval
+oferece armazenamento de baixo custo para dados acessados de 1 a 2 vezes por ano, com recuperação rápida
+
+### S3 Glacier Deep Archive
+tem o menor custo e oferece suporte a à retenção a longo prazo, podendo manter o dado por sete a dez anos ou mais. tem tempo de recuperação de até 12 horas.
+
+### S3 Outposts
+fornece armazenamento de objetos para o ambiente on-premises AWS Outposts, desempenho ideal quando os dados precisam permanecer próximos às aplicações on-premises
+
+## S3 LifeCycle
+- ações de transição - definem quando os objetos fazem a transição para outra classe de armazenamento
+- ações de expiração - definem quando os objetos expiram e são excluídos
+
+## Amazon Elastic File System (EFS)
+serviço de armazenamento totalmente gerenciado e dimensionável para uso com AWS Cloud Services e recursos on-premises. escala automaticamente para petabytes à medida que adiciona ou remove arquivos sem interromper aplicações.
+
+Benefícios do EFS:
+- redundância multi-AZ
+- acesso compartilhado
+- armazenamento elástico
+
+classes de armazenamento EFS:
+- armazenamento padrão
+- armazenamento de uma zona
+- armazenamento de arquivos
+
+ciclo de vida EFS:
+- transiação para IA (infrequent-access)
+- transição para arquivo
+- transição para padrão
+
+## Amazon FSx
+oferece suporte a vários protocolos de sistemas de arquivos, incluindo windows file server, lustre, OpenZFS e NetApp ONTAP
+
+benefícios do FSx:
+- integração do sistema de arquivos
+- infraestrutura gerenciada
+- armazenamento dimensionável
+- econômico
+
+## AWS Storage Gateway
+possibilita integração perfeita de ambientes on-premises com armazenamento em nuvem
+
+benefícios:
+- integração perfeita
+- gerenciamento de dados aprimorado
+- cache local
+- otimização de custos
+
+tipos de gateway:
+- Amazon S3 File Gateway
+- Gateway de volumes
+- Gateway de fitas
+
+## Elastic Disaster Recovery
+replica workloads críticas para aws com o mínimo de tempo de inatividade. recuperação rápida.
+
+benefícios:
+- resiliência empresarial
+- recuperação de desastres simplificada
+- otimização de custos
+
