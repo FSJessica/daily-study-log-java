@@ -478,3 +478,84 @@ benefícios:
 - recuperação de desastres simplificada
 - otimização de custos
 
+## Amazon RDS (RELATIONAL DATABASE SERVICE)
+
+- Aplicação automatizada de patches
+- backups
+- redundância
+- failover
+- recuperação de desastres
+
+### Beneficios:
+
+- otimização de custos
+- implantação multi-az
+- otimização de desempenho
+- controles de segurança
+
+## Amazon Aurora
+- Postgresql
+- mysql
+- dsql
+- até 15 replicas nas az's
+- supporte ao AWS backup
+
+### Benefícios
+
+- alto desempenho e disponibilidade
+- armazenamento automatizado e gerenciamento de backup
+- replicação avançada e tolerância a falhas
+
+## Amazon DynamoDB
+- banco de dados relacional
+- dados = itens = coleção de atributos
+- atributo = nome + valor
+- adicione ou remova atributos a qualquer momento
+
+### benefícios
+- escalabilidade com capacidade provisionada
+- alto desempenho consistente
+- alta disponibilidade e durabilidade
+- criptografia de dados
+
+## Amazon Elasticache
+- simplifica a implantação, operação e escalabilidade do armazenamento de dados na memória
+- automatiza o gerenciamento de tarefas-chave
+- melhora a performance e eficiência
+- oferece escalabilidade flexível
+- reduz as operações em geral
+
+### benefícios
+- alto desempenho para instâncias Redis, Valkey ou Memcached
+- alta disponibilidade
+- replicação em várias AZs
+- criptografia de dados
+
+## outros serviços de banco de dados
+- Amazon DocumentDB
+- AWS Backup
+- Amazon Neptune
+
+## serviços de IA/ML
+nível 1
+### serviços de linguagem
+- Amazon Comprehend
+- Amazon Polly
+- Amazon Transcribe
+- Amazon Translate
+
+### serviços de pesquisa e visão computacional
+- Amazon Kendra
+- Amazon Rekognition
+- Amazon Textract
+
+### IA conversacional e serviços de personalização
+- Amazon Lex
+- Amazon Personalize
+
+nível 2
+### serviços de ML
+- Amazon SageMaker IA
+
+nível 3
+### frameworks e infraestrutura de ML
