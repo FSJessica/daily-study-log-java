@@ -559,3 +559,319 @@ nível 2
 
 nível 3
 ### frameworks e infraestrutura de ML
+
+## SageMaker JumpStart
+casos de uso:
+- implantações rápidas de modelos de ML
+- soluções personalizadas e ajustadas
+- experimentos e protótipos de ML
+
+## Amazon Bedrock
+casos de uso:
+- IA generativa de nível empresarial
+- geração de conteúdo multimodal
+- IA conversacional avançada
+
+## Produtos Amazon Q
+### Amazon Q Business
+casos de uso:
+- solicitações de informações
+- fluxos de trabalho automatizados
+- extração de informações
+
+### Amazon Q Developer
+casos de uso:
+- geração de código mais rápida
+- confiabilidade e segurança aprimoradas
+- análises automatizadas de código
+
+## Data Analutics
+
+### Processos de ETL (extract, transform, load)
+- extrair dados de várias fontes
+- transformá-los em formatos consistentes e úteis
+- carregá-los no sistema de destino, como um data warehouse
+
+### Serviços do AWS Data Pipeline
+- Amazon Kinesis e AWS Glue para ingestão de dados
+- Amazon S3 e Amazon Redshift para armazenamento
+- Amazon EMR para processamento
+- Amazon Quicksight agora é parte do Amazon Quick Suite
+
+### Ingestão de dados
+- Amazon Kinesis Data Streams
+- Amazon Data Firehose
+### Armazenamento de dados
+- Amazon S3
+- Amazon Redshift
+### Catalogação de dados
+- AWS Glue Data Catalog
+### Processamento de dados
+- AWS Glue
+- Amazon EMR
+### Análise e visualização de dados
+- Amazon Athena
+- Amazon Redshift
+- Amazon QuickSight
+- Amazon OpenSearch Service
+
+## controles de segurança
+
+- modelo de responsabilidade compartilhada
+- gerenciamento adequado de permissoes e acesso
+- proteção completa de rede e aplicaçõe
+- proteção de dados
+- detecção e resposta a incidente
+
+# AWS IAM
+
+- usuário raiz
+- Usuários
+- Grupos
+- Políticas
+
+- Função/role
+
+  - Permissões associadas
+  - Permitem ou negam
+  - Assumidas por períodos temporários
+  - Não tem usuário e senha
+
+## serviços adicionais de gerenciamento de acesso
+
+- centro de identidade do AWS IAM
+- AWS Secrets Manager
+- AWS Systems Manager
+
+## proteção da AWS por meio de infraestrutura
+
+- grupos desegurança
+- elástic load balancing (ELB)
+- regiões AWS
+
+## proteção da AWS por meio de serviços
+
+- AWS shield - protege automaticamente os clientes da AWS contra os tiposmais comuns e frequentes de ataques DDos, sem custo.
+- AWS shield avançado - serviço pago que fornesse diagnósticos detalhados de ataques e a capacidde de detectar e mitigar aqueles ataques elaborados de DDoS.
+- AWS WAF - firewall de aplicativo web que monitora as solicitações de rede que entram em seus aplicativos web.
+
+## AWS Certificate Manager
+
+- provisiona, gerencia e implanta certificações SSL/TSL
+- Protege vários serviços da AWS e recursos internos conectados.
+
+## tipos de criptografia de dados
+
+- criptografia de dados em repouso: os dadps estão ociosos e não se movem, como quando estão armazenados em um banco de dados.
+- criptografia de dados em trânsito: os dados estão se movendo entre locais, como qundo estão sendo enviados de um banco de dados para uma aplicação.
+
+## Proteção de dados da AWS
+
+### integrada
+
+- Amazon S3
+- Amazon EBS
+- Amazon DynamoDB
+
+## Serviços de proteção de dados da AWS
+
+- AWS Key Management Service (AWS KMS)- criare gerenciar chaves criptográficas.
+- Amazon Macie- monitorar dados sensíveis em repouso.
+- AWS Certificate Manager(ACM) - protege dados em trânsito
+
+## Detectar e responder a incidentes de segurança
+
+## Amazon Inspector
+
+- Executa avaliações de segurança automatizadas.
+- Identifica desvios das melhores práticas de segurança
+- Detecta exposições no Amazon EC2
+- Aponta vulnerabilidades na instalação de softwares
+
+## Amazon GuardDuty
+
+- Monitoramento contínuo
+- Detecção de ameaças potencializadas com IA/ML
+
+## Amazon Detective
+
+- Sondagens automáticas de segurança de forma simplificada
+- Visualização interativa de ameaças
+- Insights potencializados com IA Generativa.
+
+## Amazon Security Hub
+
+- Uma visão abrangente de segurança
+- Monitoramento automático e eficiente
+- Agrupamentos acionáveis de insights.
+
+## AWS Marketplace recursos de segurança
+
+- Ferramentas de detecção e prevenção de ameaças
+- Ferramentas de gerenciamento de identidade e acesso
+- Proteção de dados desenvolvimento da AWS
+- Ferramentas de conformidade e governança
+
+
+## Monitoramento de recursos na nuvem AWS
+
+- Segurança
+- Monitoramento
+- Auditoria
+- Conformidade
+
+## Benefícios de monitorar seus recursos de nuvem
+
+- Manter a segurança
+- Responder proativamente
+- garantir a confiabilidade
+- Monitorar custos
+- Melhore o desempenhp
+
+## Amazon CloudWatch
+
+- Acesso centralizado a todas as suas métricas
+- Visibilidade de todas aplicações, infraestrutura e serviços
+- Redução do tempo médio de resolução (MTTR) e melhora do TCO
+- Insights para otimizar aplicações e recursos operacionais
+- Métricas, alarmes, Painéis, logs
+
+## AWS CloudTrail
+
+rastreia a atividade do usuário e o uso da API  na nuvem AWS, on-premises e até mesmo com outros provedores de nuvem.
+Fornece um histórico detalhado das chamadas de API  para que seja possível acompanhar as alterações e identificar quem e quando as fez.
+
+Benefícios: fornece auditoria, monitoramento de segurança e solução de problemas operacionais.
+
+- eventos, logs e claudtrail insights.
+
+## Benefícios da conformidade com a AWS
+
+Conformidade refere-se à adesão de seus recursos e dados na nuvem às regulamentações pertinentes, aospadrões do setor e às políticas internas relacionadas à segurança e proteção de dados.
+A AWS ajuda você a cumprir metas e requisitos de confformidade ds seguintes maneiras:
+- Ao herdar os controles de segurança mais recentes que a AWS usa em sua própria infraestrutura
+- Ao validar para terceiros para milhares de requisitos globais
+- Ao simplificar e automatizar a conformidade
+- Relatórios de conformidade sob demanda
+
+## AWS Artifact
+
+ Oferece de maneira gratuita acesso sob demanda a relatórios de segurança e conformidade da AWS e a determinados contratos on-line
+
+Benefícios: ajuda a gerenciar em grande escala, economizar tempo com acesso sob demanda a relatórios de conformidade e implantar com mais confiança.
+
+- AWS Artifact Agreements
+- AWS Artifact Reports.
+
+## AWS Config
+Serviço para avaliar, analisar e auditar as configurações dos recursos da AWS.
+Benefícios: Ajuda a avaliar as configurações em relação ao estado desejado, gerenciar alterações na configuração de recursos e simplificar a solução de problemas e a remediação.
+
+
+- Rastreia continuamente as mudanças
+- Cria regras padronizadas
+- Gera relatórios de conformidade
+
+## AWS Audit Manager
+
+Serviço que audita continuamente seu uso da AWS para simplificar a avaliação de risco e conformidade. Ela ajuda a coletar evidências
+e gerenciar dados de auditoria.
+
+Benefícios: a solução Audit Manager economiza tempo com a coleta automatizada de evidências, simplifica a colaboração entre as equipes e ajuda
+a garantir  a integridade das aditorias com permissões somente para leitura.
+
+- Avalia suas políticas
+- Gerencia as revisões
+- Cria relatórios prontos para auditoria
+- Possui estruturas pré-construídas
+
+## AWS Organizations
+
+Ajuda a gerenciar e controlar o ambiente de maneira centralizada à medida que seus recursos da AWS expandem e são dimensionados.
+
+Benefícios: rápido scaling de seu ambiente ao criar de forma programática novas contas da AWS para recursos e equipes. Ela também ajuda a simplificar
+o gerenciamento de permissões por meio de SCPs e gerenciar e otimizar os custos em suas contas e recursos da AWS
+
+## Governança na nuvem AWS
+
+- AWS Control Tower
+- AWS Service Catalog
+- AWS License Manager
+
+## AWS Control Tower
+
+Pode ser usado para impor e gerenciar regras de governança em escala para segurança, operações e conformidade em todas as suas organizações e contas na nuvem AWS.
+
+Benefícios: Pode te ajudar a economizar tempo e , ao mesmo tempo, fornecer governança. Usa controles pré-configurados que podem ajudar a configurar de forma rápida
+ambientes com várias contas, automação com governança  integrada e integração de software de terceiros em escala.
+
+## AWS Service Catalog
+
+É possível criar, compartilhar e organizar por meio de um catálogo com curadoria de recursos da AWS. É possível implantar recursos básicos de rede e
+ferramentas de segurança para novas contas da AWS para poder governar de forma consistente.
+
+Beefícios: economiza tempo ao agilizar a localização e a implantação de recursos de nuvem de autoatendimento aprovados.
+Também ajuda a manter a agilidade e, ao mesmo tempo, melhorar a governança dos recursos em várias contas.
+
+## AWS License Manager
+
+É um serviço que ajuda a gerenciar as licenças de software e ajustar os custos de licenciamento.
+
+Benefícios: a solução License Manager ajuda na visibilidade e no controle, no rastreamento e no gerenciamento de licenças e na redução do risco de não conformidade com as licenças.
+
+
+## AWS Health Dashboard
+
+É possível visualizar informações de integridade específicas da conta e obter atualizações de eventos da solução AWS Health.
+Também é possível usar a solução AWS Health de forma programática com o uso da API da solução AWS Health, disponível com a solução AWS Premiun Support
+
+Benefícios: fornece informações valiosas, serve como fonte de dados para eventos e mudanças. 
+
+## Trusted Advisor
+
+É possível avaliar de forma contínua seu ambiente da AWS  com o uso de verificações de práticas recomendadas em várias categorias.
+
+Benefícios: ajuda a manter o alinhamento com as práticas recomendadas, priorizar recomendações e otimizar os recursos em escala na AWS
+
+## IAM Access Analyzer
+
+Fornece recursos para definir, verificar e refinar permissões ao analisar o acesso externo e validar a possibilidade de suas políticas atenderem aos padrões de segurança corporativos.
+
+Benefícios: Oferece benefícios como refinar permissões, validar políticas do IAM e pode ajudar a atingir as metas de acesso com menos privilégios, além de automatizar as análises de políticas do IAM.
+
+## Principais conceitos de definição de preço da AWS
+
+- Pagamento conforme o uso
+- economize com um compromisso
+- Pague menos usando mais
+
+## Fatores determinantes de custo
+
+- computação
+- Armazenamento
+- Transferência de dados
+
+## Serviços de preços e cobrança da Aws
+
+## AWS Organizations
+fornece gerenciamento e governança centralizados do ambiente da AWS. É possível criar, agrupar e geranciar contas.
+Também é possível aplicar políticas de segurança no nível da conta e consolidar o faturamento com váriias contas com o uso de um 
+único método de pagamento.
+
+## Painel do gerenciamento de faturamento e custos da AWS
+
+centraliza o gerenciamento de custos ao mostrar cobranças atuais , uso, previsões e detalhamentos segmentados.
+Fornece tbm ferramentas para gerenciar pagamentos, visualizar faturas, definir orçamentos e consolidar o faturamento.
+
+## AWS Budgets
+
+A solução AWS Budgets ajuda a definir orça,emtos personalizados e envia alertas quando os custos, o uso, autilização ou a cobertura da solução savings plnans
+e instâncias reservadas excedem os limites definidos.
+
+## AWS Cost Explorer
+
+Ajuda a visualizar, analisar e gerenciar os custos e o uso da AWS com grafos, relatórios e previsões interativos. Ela fornece informações sobre padrões de gastos, tendências e recomendações de instâncias reservadas.
+
+## Calculadora de preços da AWS
+
+É possível inserir configuraçções específicas, como tipos de instância, opçẽs de armazenamento e volumes de transferência de dados.
