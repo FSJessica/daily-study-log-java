@@ -849,7 +849,7 @@ Benefícios: Oferece benefícios como refinar permissões, validar políticas do
 
 - computação
 - Armazenamento
-- Transferência de dados
+- Transferência de dados de saída
 
 ## Serviços de preços e cobrança da Aws
 
@@ -875,3 +875,150 @@ Ajuda a visualizar, analisar e gerenciar os custos e o uso da AWS com grafos, re
 ## Calculadora de preços da AWS
 
 É possível inserir configuraçções específicas, como tipos de instância, opçẽs de armazenamento e volumes de transferência de dados.
+
+## Planos de solução Support
+
+- suporte básico:  incluído para rodos os clientes da AWS
+- suporte para desenvolvedores: recomendado para experimentar ou testar na AWS
+- suporte business: nível minino recomendado para workloads de produção na AWS
+- suporte empresarial rápido: recomendado para workloads críticas de produção e negócios na AWS
+- enterprise support: recomendado para workloads críticas para os negócios e essenciais para operação na AWS
+
+## AWS Marketplace
+
+Catálogo digital com milhares de ofertas de software de provedores independentes de software. As soluções oferecidas são:
+
+- Software como serviço (SaaS)
+- Machine learining(ML) e IA
+- Dados e analytics
+
+## Rede de parceiros AWS
+
+Comunidade global que usa tecnologias, programas e serviços para clientes. Alguns benefícios incluem:
+
+- benefícios de financiamento
+- eventos de parceiros da AWS
+- treinamento e certificação de parceiros da AWS.
+
+
+
+## Migração
+
+- fase de avaliação: cria o caso de negócios para a migração e avalia sua prontidão.
+- fase de mobilização: prepara a organização e mobiliza os recursos necessários para a migração.
+- migrar e modernizar: usa sua estratégia, seu plano e as práticas recomendadas para migrar e modernizar.
+
+## cloud adoption framework (CAF)
+
+### perspectivas do AWS CAF
+
+- negócios
+- pessoas 
+- governança
+- plataforma
+- segurança
+- operações
+
+## 7 Rs da Migração
+
+- Rehost
+- Relocate
+- Replatform
+- Refactor
+- Repurchase
+- Retain
+- Retire
+
+## Serviços e ferramentas de Migração
+
+- AWS Appliation Discovery
+- AWS Application Migration service
+- Migration Evaluator
+- AWS Migration Hub
+
+Benefícios: 
+
+- Processos de migração simplificados
+- Riscos reduzidos de erros ou tempo de inatividade
+- economia de custos.
+- tempo mais rápido para obter valor na nuvem
+
+FASE DE AVALIAÇÃO:
+
+- Migration evaluator
+
+FASE DE MOBILIZAÇÃO:
+
+- Application Discovery Service
+- Migration HUb
+
+FASE DE MIGRAÇÃO E MODERNIZAÇÃO
+
+- Application Migration service.
+
+## Migração de bancos de dados para a AWS
+
+- AWS DMS (Database Migration Service): viabiliza a migração rápida e segura de bancos de dados e a execução de tarefas contínuas de replicação
+de dados para bancos de dados ativos e data warehouses.
+Benefícios: manutensão de alta isponibilidade e baixo tempo de inatividade durante o processo de migração. Compatível com
+migrações homogeneas e heterogeneas
+
+- AWS SCT (Schema Convertion Tool): conversão de esquemas de bancsos de dados e objetos de código de um mecanismo de banco de dados para outro.
+Benefícios: simplificar migrações de banco de dados por meio da automatização de análise, recomendações e conversões de esquemas em grande escala.
+
+## Transferências de dados on-line
+
+- AWS DataSync: Simplifica e acelera a movimentação de grandes quantidadades de dados entre o armazenamento on-premises e os serviços de armazenamento da AWS.
+Benefícios: simplificar e accelerar migrações seguras de dados. gerencia workloads de movimentação de dados com controle de utilização de largura de banda, agendamento de migração
+filtragem de tarefas e relatórios de tarefas.
+
+- AWS Transfer Family: viabili;za o gerenciamento e compartilhamentode dados com facilidade, comm transferências de arquivos simples, seguras e dimensionáveis.
+fornece suporte totalmente gerenciadoo para transferencias seguras de arquivos por FTP, Secure FIle Transfer Protocol (SFTP)
+, File Transfer protocol secure (FTPS) e outros protocolos.
+Benefícios: Incluem a simplificação do processo de cofiguração e gerenciamento detransferências de arquivos e a redução da necessidade
+de gerenciamento complexo da infraestrutura.
+
+- AWS Direct Connect: permite estabelecer uma conexão privada dedicada entre sua rede e nuvem privada virtual (VPC) na nuvem AWS. Por ser sua conexão dedicada,
+trata-se de uma maneira rápida, confiável e segura de transferir dados ou arquivos.
+Benefícios: ajuda a reduzircustos de rede e aumenta a quantidade de largura de banda
+
+## Transferências de dados off-line
+
+- Dispositivos Snowball Edge Storage Optimized: oferecem armazenamento NVMe de alto desempenho para vibilizar a simplificação das migrações de dados de vários petabytes de locais on-premises para a AWS
+Benefícios: incluem oferecer melhor desempenho computacional e maior capacidade de armazenamento com gigabytes de dados por segundo para workloads de migração
+de dados com requisitos off-line.
+
+
+## Serviços para desenvolvimento
+
+- AWS CodeBuild
+- AWS CodePipeline
+- AWS X-Ray
+- AWS AppSync
+- AWS Amplify
+
+## Serviços para aplicações empresariais
+
+- Amazon Connect
+- amazon simple emailservice (Amazon SES)
+
+## serviços de computação para o usuário final
+
+- amazon AppStream 2.0
+- Amazon workspaces
+- Amazon WorkSpaces Secure Browser (antigo Amazon workspaces web)
+
+## serviços de IoT
+
+- AWS iOt cORE
+
+## AWS Well-architected framework
+
+Pilares:
+
+- Excelência operacional
+- Segurança
+- Confiabilidade
+- Eficiência de desempenho
+- Otimização de custos
+- Sustentabilidade
